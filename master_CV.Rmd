@@ -1,0 +1,211 @@
+---
+name: Pete
+surname: Apicella
+position: "Molecular Biologist"
+address: "13650 E Colfax Avenue, Aurora, Colorado"
+profilepic: "./image/me.jpg"
+#www: "bryanjenks.dev"
+email: "apicellapv@gmail.com"
+github: apicellap
+linkedin: peterapicella
+orcid: 0000-0002-0747-5338
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 1422BE
+aboutme: "Highly published scientist with experience in plant and fungal biology. I bring startup environment experience"
+docname: CV
+output: vitae::awesomecv
+keep_tex: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+
+require(xfun)
+
+packages <- c('vitae'     # The CV's LaTeX Template
+             ,'tibble'    # Data structure for tribbles
+             ,'magrittr'  # The Pipe %>%
+             ,'here'      # Relative File Paths
+             ,'readr'     # Data Loading
+             ,'glue'      # String Manipulation
+             ,'tidyverse' # Needed for bind_rows and whatever
+             ,'scholar'   # Updating publications from google scholar
+             ,'kableExtra'# Adding technical skills table
+            )
+
+xfun::pkg_attach2(packages, message = FALSE)
+
+#source(file = here("r","data.r"))
+
+```
+
+# Education
+
+```{r EDUCATION}
+structure(list(what = c("MSc Plant Sciences", "BSc Horticulture"), when = structure(c("2020", "2018"
+), class = c("glue", "character")), with = c("University of Connecticut", 
+"University of Connecticut"), where = c("Storrs, Connecticut", 
+"Storrs, Connecticut"), why = list("Thesis - Studies of the Cannabinoid Biosynthetic Pathway in Developing Cannabis sativa Flowers and Elucidation of Genetic and Physiological Mechanisms Regulating Cannabinoid Production", "Honors Thesis - Combinations of Allelopathic Crop Extracts Reduce Digitaria spp. and Setaria faberi Seed Germination")), row.names = c(NA, 2L), groups = structure(list(
+    what = c("BSc Molecular Microbiology & Immunology with Minors in Mathematics & Chemistry with Honors", 
+    "High School Diploma", "PhD Microbiology & Immunology"), when = structure(c("2017", 
+    "2013", "2022"), class = c("glue", "character"
+    )), with = c("University of Nevada, Reno", 
+    "Stanford University"), where = c("Reno, NV", "Stanford, CA"
+    ), .rows = structure(list(2L, 1L), ptype = integer(0), class = c("vctrs_list_of", 
+    "vctrs_vctr", "list"))), row.names = c(NA, -2L), class = c("tbl_df", 
+"tbl", "data.frame"), .drop = TRUE), class = c("vitae_detailed", 
+"vitae_preserve", "grouped_df", "tbl_df", "tbl", "data.frame"
+), preserve = c("what", "when", "with", "where", "why"), protect = TRUE)
+
+```
+
+# Technical Skills
+
+```{r techtable, results='markup'}
+tribble(
+   ~`Dry Lab`, ~`Wet Lab`,
+  "Snapgene Viewer, BLAST, Ensembl, Microsoft Office, R (ggplot2, agricolae, RMarkdown, corrplot, tidyverse, and other packages)",
+  "Tissue Culture, Protoplasting, Nucleic acid isolation, Gel electrophoresis, PCR, quantitative PCR, RT-PCR, Experimental design",
+) %>%
+  kable(booktabs = T, align = 'c', escape = F, format = "latex") %>%
+  kable_styling(full_width = F, font_size = 10,latex_options = "hold_position") %>% 
+  row_spec(0, bold = T, color = "#000000") %>% 
+  row_spec(1, bold = F, color = "#414141") %>% 
+  column_spec(column = 1:3, width = '9 cm')
+```
+
+
+# Experience
+
+```{r EXPERIENCE}
+
+work <- tribble(
+  ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
+  "Research Associate", "Mydecine Innovations Group Inc.", "October", 2020, "April", 2022, "Denver, Colorado", "Conceived the design of intellectual property related to increasing the rate biosynthesis of secondary metabolites in a filamentous fungus to be used as a heterologous host. Listed as a co-inventor on the provisional patent.",
+  "Research Associate", "Mydecine Innovations Group Inc.", "October", 2020, "April", 2022, "Denver, Colorado", "Designed and implemented experiments related to nucleic acid isolation, molecular identification of species, gene expression analysis, stimulation of defense compound biosynthesis, cloning of metabolite biosynthesis cassettes, protoplasting, and CRISPR-Cas9 genome editing.",
+  "Research Associate", "Mydecine Innovations Group Inc.", "October", 2020, "April", 2022, "Denver, Colorado", "Created mutants of a filamentous fungus to serve as platforms for ectopic metabolite production",
+  "Research Associate", "Mydecine Innovations Group Inc.", "October", 2020, "April", 2022, "Denver, Colorado", "Facilitated the acquisition of scientific equipment and overall operationality of a 7500 ft^2 laboratory",
+  "Research Associate", "Mydecine Innovations Group Inc.", "October", 2020, "April", 2022, "Denver, Colorado", "Trained colleagues and one intern in fungal tissue culture, molecular biology techniques, and basic use of R for data visualization and statistical analysis",
+  "Research Associate", "Mydecine Innovations Group Inc.", "October", 2020, "April", 2022, "Denver, Colorado", "Created R Markdown guides on how to implement data visualization and analysis in R",
+  "Graduate Research Assistant", "University of Connecticut ", "August", 2018, "August", 2020, "Storrs, Connecticut", "Successfully defended thesis on genetic regulation of cannabinoid biosynthesis in Cannabis sativa.",
+  "Graduate Research Assistant", "University of Connecticut ", "August", 2018, "August", 2020, "Storrs, Connecticut", "Designed and executed experiments in university greenhouses and commercial grow facilities.",
+  "Graduate Research Assistant", "University of Connecticut ", "August", 2018, "August", 2020, "Storrs, Connecticut", "Implemented quantitative PCR to measure gene expression levels of genes in the cannabinoid biosynthesis pathway and quantified cannabinoid content using HPLC",
+  "Graduate Research Assistant", "University of Connecticut ", "August", 2018, "August", 2020, "Storrs, Connecticut", "Analyzed and visualized data in R to facilitate comprehension in invited talks and manuscripts.",
+  "Graduate Research Assistant", "University of Connecticut ", "August", 2018, "August", 2020, "Storrs, Connecticut", "Obtained controlled substances research licenses for laboratory, wrote standard operating procedures for the sampling, transport, and secure storage of controlled substances.",
+  "Graduate Mentor", "University of Connecticut ", "August", 2018, "August", 2020,"Storrs, Connecticut", "Trained undergraduate and graduate students in molecular biology techniques.",
+  "Graduate Mentor", "University of Connecticut ", "August", 2018, "August", 2020, "Storrs, Connecticut", "Mentored one student to win a grant, design and execute an experiment, and present findings at a university research forum.",
+  "Teaching Assistant", "University of Connecticut ", "August", 2018, "August", 2020, "Storrs, Connecticut", "Lectured one laboratory section of woody plant identification. Led 15 students through university campus to teach students characteristics of plants. Graded assignments and recorded grades.",
+  "Undergraduate Researcher", "University of Connecticut ", "August", 2016, "May", 2018, "Storrs, Connecticut", "Awarded $8000 in grant funding to phenotypically survey North America’s largest Aronia germplasm collection. ",
+  "Undergraduate Researcher", "University of Connecticut ", "August", 2016, "May", 2018, "Storrs, Connecticut", "Evaluated sugar and acidity content of fruit juice from 120 Aronia genotypes, commonly referred to as chokeberry. Identified specific genotypes with desirable Brix°: titratable acidity ratios to be used as parentage for breeding varieties with more palatable fruits. ",
+  "Undergraduate Researcher", "University of Connecticut ", "August", 2016, "May", 2018, "Storrs, Connecticut", "Presented findings in posters at national and international conferences."
+)
+
+
+
+work %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} → {endMonth} {endYear}",.na = ""),
+    where = where
+  )
+
+
+
+```
+
+# Publications
+
+```{=latex}
+
+
+\leavevmode\vadjust pre{\hypertarget{ref-apicella_delineating_2022}{}}%
+\textbf{Apicella, P.}, Ma, G., Ma, Y., \& Berkowitz, G. A.
+The Cannabis Jasmonate-Independent Homeodomain Zipper Family IV Gene 
+HDG5 Functions in Trichome Morphogenesis and Involves 
+in Immune response in transgenic \textsc{Nicotiana tabacum L.} 
+\emph{manuscript in preparation}
+
+\leavevmode\vadjust pre{\hypertarget{ref-apicella_delineating_2022}{}}%
+\textbf{Apicella, P.}, Ma, G., Ma, Y., \& Berkowitz, G. A. (2022).
+Delineating genetic regulation of cannabinoid biosynthesis during female
+flower development in \textsc{Cannabis sativa }. \emph{Plant Direct},
+\emph{6}(6). \url{https://doi.org/10.1002/pld3.412}
+
+\leavevmode\vadjust pre{\hypertarget{ref-haiden_overexpression_2022}{}}%
+Haiden, S. R., \textbf{Apicella, P.}, Ma, Y., \& Berkowitz, G. A. (2022).
+Overexpression of CsMIXTA, a Transcription Factor from Cannabis sativa,
+Increases Glandular Trichome Density in Tobacco Leaves. \emph{Plants},
+\emph{11}(11), 1519. \url{https://doi.org/10.3390/plants11111519}
+
+\leavevmode\vadjust pre{\hypertarget{ref-ma_genome-wide_2022}{}}%
+Ma, G., Zelman, A. K., \textbf{Apicella, P.}, \& Berkowitz, G. (2022).
+Genome-Wide Identification and Expression Analysis of Homeodomain
+Leucine Zipper Subfamily IV (HD-ZIP IV) Gene Family in Cannabis sativa
+L. \emph{Plants}, \emph{11}(10), 1307.
+\url{https://doi.org/10.3390/plants11101307}
+
+\leavevmode\vadjust pre{\hypertarget{ref-mcgehee_first_2019}{}}%
+McGehee, C. S., \textbf{Apicella, P.}, Raudales, R., Berkowitz, G., Ma, Y.,
+Durocher, S., \& Lubell, J. (2019). First Report of Root Rot and Wilt
+Caused by Pythium myriotylum on Hemp ( Cannabis sativa ) in the United
+States. \emph{Plant Disease}, \emph{103}(12), 3288--3288.
+\url{https://doi.org/10.1094/PDIS-11-18-2028-PDN}
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+Mahoney, J. D., \textbf{Apicella, P.}, \& Brand, M. H. (2018). Adventitious
+shoot regeneration from in vitro leaves of Aronia mitschurinii and
+cotyledons of closely related Pyrinae taxa. \emph{Scientia
+Horticulturae}, \emph{237}, 135--141.
+\url{https://doi.org/10.1016/j.scienta.2018.03.062}
+```
+
+
+# Invited Talks
+```{=latex}
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+\textbf{Apicella P.} "The Plant Science of \emph{Cannabis sativa}", Tower Hill 
+Botanical Garden, Virtal oral presentation. March 2022.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+\textbf{Apicella P.} "The Plant Science of \emph{Cannabis sativa}", 
+Groton Garden Club, Virtal oral presentation. May 2021.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+\textbf{Apicella P.} "The Plant Science of \emph{Cannabis sativa}", Tower Hill 
+Botanical Garden, Oral presentation. March 2020.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+\textbf{Apicella P.}, Ma Y., Schultz T., Ferrarese R., Picard R., 
+Barolli S., and Berkowitz G. "Looking Under The Hood Of The Cannabis Plant: 
+A Molecular Evaluation Of Cannabinoid Production", Emerald Conference,
+Oral presentation. February 2020.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+\textbf{Apicella P.} and Berkowitz G. "The Plant Science of \emph{Cannabis sativa}", 
+Middlesex Community College, Oral presentation. New York, New York. October 2019.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+\textbf{Apicella P.} and Berkowitz G. "The Plant Science of \emph{Cannabis sativa}", Metropolitan 
+Horticultural Society, Oral presentation. New York, New York. September 2019.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+\textbf{Apicella P.} and Berkowitz G. "Association of a prenyltransferase (GOT) with THCA 
+production in medical marijuana", American Society of Plant Biology, 
+Brief oral presentation. San Jose, California. August 2019.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+\textbf{Apicella P.} and Berkowitz G. "The Plant Science of \emph{Cannabis sativa}", 
+Northeast Food And Drug Officials Association Meeting, Oral presentation. 
+Northampton, Massachusetts. May 2019.
+```
+
+
+
+
+\pagebreak
+

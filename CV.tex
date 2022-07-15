@@ -1,0 +1,282 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt,a4paper,]{awesome-cv}
+
+% Configure page margins with geometry
+\usepackage{geometry}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\definecolor{awesome}{HTML}{1422BE}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\photo{./image/me.jpg}
+\name{Pete}{Apicella}
+
+\position{Molecular Biologist}
+\address{13650 E Colfax Avenue, Aurora, Colorado}
+
+\email{\href{mailto:apicellapv@gmail.com}{\nolinkurl{apicellapv@gmail.com}}}
+\orcid{0000-0002-0747-5338}
+\github{apicellap}
+\linkedin{peterapicella}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+\quote{I am a highly published molecular biologist with experience in
+plant and fungal biology. I bring startup environment experience}
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {July 2022}
+    {Pete Apicella~~~·~~~CV}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+\begin{cventries}
+    \cventry{MSc Plant Sciences}{University of Connecticut}{Storrs, Connecticut}{2020}{\begin{cvitems}
+\item Thesis - Studies of the Cannabinoid Biosynthetic Pathway in Developing Cannabis sativa Flowers and Elucidation of Genetic and Physiological Mechanisms Regulating Cannabinoid Production
+\end{cvitems}}
+    \cventry{BSc Horticulture}{University of Connecticut}{Storrs, Connecticut}{2018}{\begin{cvitems}
+\item Honors Thesis - Combinations of Allelopathic Crop Extracts Reduce Digitaria spp. and Setaria faberi Seed Germination
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{technical-skills}{%
+\section{Technical Skills}\label{technical-skills}}
+
+\begin{table}[!h]
+\centering\begingroup\fontsize{10}{12}\selectfont
+
+\begin{tabular}{>{\centering\arraybackslash}p{9 cm}>{\centering\arraybackslash}p{9 cm}>{}p{9 cm}}
+\toprule
+\textcolor[HTML]{000000}{\textbf{Dry Lab}} & \textcolor[HTML]{000000}{\textbf{Wet Lab}}\\
+\midrule
+\textcolor[HTML]{414141}{Snapgene Viewer, BLAST, Ensembl, Microsoft Office, R (ggplot2, agricolae, RMarkdown, corrplot, tidyverse, and other packages)} & \textcolor[HTML]{414141}{Tissue Culture, Protoplasting, Nucleic acid isolation, Gel electrophoresis, PCR, quantitative PCR, RT-PCR, Experimental design}\\
+\bottomrule
+\end{tabular}
+\endgroup{}
+\end{table}
+
+\hypertarget{experience}{%
+\section{Experience}\label{experience}}
+
+\begin{cventries}
+    \cventry{Mydecine Innovations Group Inc.}{Research Associate}{Denver, Colorado}{October 2020 → April 2022}{\begin{cvitems}
+\item Conceived the design of intellectual property related to increasing the rate biosynthesis of secondary metabolites in a filamentous fungus to be used as a heterologous host. Listed as a co-inventor on the provisional patent.
+\item Designed and implemented experiments related to nucleic acid isolation, molecular identification of species, gene expression analysis, stimulation of defense compound biosynthesis, cloning of metabolite biosynthesis cassettes, protoplasting, and CRISPR-Cas9 genome editing.
+\item Created mutants of a filamentous fungus to serve as platforms for ectopic metabolite production
+\item Facilitated the acquisition of scientific equipment and overall operationality of a 7500 ft\^2 laboratory
+\item Trained colleagues and one intern in fungal tissue culture, molecular biology techniques, and basic use of R for data visualization and statistical analysis
+\item Created R Markdown guides on how to implement data visualization and analysis in R
+\end{cvitems}}
+    \cventry{University of Connecticut }{Graduate Research Assistant}{Storrs, Connecticut}{August 2018 → August 2020}{\begin{cvitems}
+\item Successfully defended thesis on genetic regulation of cannabinoid biosynthesis in Cannabis sativa.
+\item Designed and executed experiments in university greenhouses and commercial grow facilities.
+\item Implemented quantitative PCR to measure gene expression levels of genes in the cannabinoid biosynthesis pathway and quantified cannabinoid content using HPLC
+\item Analyzed and visualized data in R to facilitate comprehension in invited talks and manuscripts.
+\item Obtained controlled substances research licenses for laboratory, wrote standard operating procedures for the sampling, transport, and secure storage of controlled substances.
+\end{cvitems}}
+    \cventry{University of Connecticut }{Graduate Mentor}{Storrs, Connecticut}{August 2018 → August 2020}{\begin{cvitems}
+\item Trained undergraduate and graduate students in molecular biology techniques.
+\item Mentored one student to win a grant, design and execute an experiment, and present findings at a university research forum.
+\end{cvitems}}
+    \cventry{University of Connecticut }{Teaching Assistant}{Storrs, Connecticut}{August 2018 → August 2020}{\begin{cvitems}
+\item Lectured one laboratory section of woody plant identification. Led 15 students through university campus to teach students characteristics of plants. Graded assignments and recorded grades.
+\end{cvitems}}
+    \cventry{University of Connecticut }{Undergraduate Researcher}{Storrs, Connecticut}{August 2016 → May 2018}{\begin{cvitems}
+\item Awarded \$8000 in grant funding to phenotypically survey North America’s largest Aronia germplasm collection. 
+\item Evaluated sugar and acidity content of fruit juice from 120 Aronia genotypes, commonly referred to as chokeberry. Identified specific genotypes with desirable Brix°: titratable acidity ratios to be used as parentage for breeding varieties with more palatable fruits. 
+\item Presented findings in posters at national and international conferences.
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{publications}{%
+\section{Publications}\label{publications}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-apicella_delineating_2022}{}}%
+\textbf{Apicella, P.}, Ma, G., Ma, Y., \& Berkowitz, G. A.
+The Cannabis Jasmonate-Independent Homeodomain Zipper Family IV Gene 
+HDG5 Functions in Trichome Morphogenesis and Involves 
+in Immune response in transgenic \textsc{Nicotiana tabacum L.} 
+\emph{manuscript in preparation}
+
+\leavevmode\vadjust pre{\hypertarget{ref-apicella_delineating_2022}{}}%
+\textbf{Apicella, P.}, Ma, G., Ma, Y., \& Berkowitz, G. A. (2022).
+Delineating genetic regulation of cannabinoid biosynthesis during female
+flower development in \textsc{Cannabis sativa }. \emph{Plant Direct},
+\emph{6}(6). \url{https://doi.org/10.1002/pld3.412}
+
+\leavevmode\vadjust pre{\hypertarget{ref-haiden_overexpression_2022}{}}%
+Haiden, S. R., \textbf{Apicella, P.}, Ma, Y., \& Berkowitz, G. A. (2022).
+Overexpression of CsMIXTA, a Transcription Factor from Cannabis sativa,
+Increases Glandular Trichome Density in Tobacco Leaves. \emph{Plants},
+\emph{11}(11), 1519. \url{https://doi.org/10.3390/plants11111519}
+
+\leavevmode\vadjust pre{\hypertarget{ref-ma_genome-wide_2022}{}}%
+Ma, G., Zelman, A. K., \textbf{Apicella, P.}, \& Berkowitz, G. (2022).
+Genome-Wide Identification and Expression Analysis of Homeodomain
+Leucine Zipper Subfamily IV (HD-ZIP IV) Gene Family in Cannabis sativa
+L. \emph{Plants}, \emph{11}(10), 1307.
+\url{https://doi.org/10.3390/plants11101307}
+
+\leavevmode\vadjust pre{\hypertarget{ref-mcgehee_first_2019}{}}%
+McGehee, C. S., \textbf{Apicella, P.}, Raudales, R., Berkowitz, G., Ma, Y.,
+Durocher, S., \& Lubell, J. (2019). First Report of Root Rot and Wilt
+Caused by Pythium myriotylum on Hemp ( Cannabis sativa ) in the United
+States. \emph{Plant Disease}, \emph{103}(12), 3288--3288.
+\url{https://doi.org/10.1094/PDIS-11-18-2028-PDN}
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+Mahoney, J. D., \textbf{Apicella, P.}, \& Brand, M. H. (2018). Adventitious
+shoot regeneration from in vitro leaves of Aronia mitschurinii and
+cotyledons of closely related Pyrinae taxa. \emph{Scientia
+Horticulturae}, \emph{237}, 135--141.
+\url{https://doi.org/10.1016/j.scienta.2018.03.062}
+
+\hypertarget{invited-talks}{%
+\section{Invited Talks}\label{invited-talks}}
+
+\documentclass{article}
+\usepackage[sfdefault]{roboto}
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+\textbf{Apicella P.} "The Plant Science of \emph{Cannabis sativa}", Tower Hill 
+Botanical Garden, Virtal oral presentation. March 2022.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+\textbf{Apicella P.} "The Plant Science of \emph{Cannabis sativa}", 
+Groton Garden Club, Virtal oral presentation. May 2021.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+\textbf{Apicella P.} "The Plant Science of \emph{Cannabis sativa}", Tower Hill 
+Botanical Garden, Oral presentation. March 2020.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+\textbf{Apicella P.}, Ma Y., Schultz T., Ferrarese R., Picard R., 
+Barolli S., and Berkowitz G. "Looking Under The Hood Of The Cannabis Plant: 
+A Molecular Evaluation Of Cannabinoid Production", Emerald Conference,
+Oral presentation. February 2020.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+\textbf{Apicella P.} and Berkowitz G. "The Plant Science of \emph{Cannabis sativa}", 
+Middlesex Community College, Oral presentation. New York, New York. October 2019.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+\textbf{Apicella P.} and Berkowitz G. "The Plant Science of \emph{Cannabis sativa}", Metropolitan 
+Horticultural Society, Oral presentation. New York, New York. September 2019.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+\textbf{Apicella P.} and Berkowitz G. "Association of a prenyltransferase (GOT) with THCA 
+production in medical marijuana", American Society of Plant Biology, 
+Brief oral presentation. San Jose, California. August 2019.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+\textbf{Apicella P.} and Berkowitz G. "The Plant Science of \emph{Cannabis sativa}", 
+Northeast Food And Drug Officials Association Meeting, Oral presentation. 
+Northampton, Massachusetts. May 2019.
+
+\pagebreak
+
+
+
+\end{document}
