@@ -66,7 +66,7 @@ structure(list(what = c("MSc Plant Sciences", "BSc Horticulture"), when = struct
 tribble(
    ~`Dry Lab`, ~`Wet Lab`,
   "Snapgene Viewer, BLAST, Ensembl, Microsoft Office, R (ggplot2, agricolae, RMarkdown, corrplot, tidyverse, and other packages)",
-  "HPLC, Tissue Culture, Protoplasting, Nucleic acid isolation, Gel electrophoresis, PCR, quantitative PCR, RT-PCR, Experimental design",
+  "Tissue Culture, Protoplasting, Nucleic acid isolation, Gel electrophoresis, PCR, quantitative PCR, RT-PCR, Experimental design",
 ) %>%
   kable(booktabs = T, align = 'c', escape = F, format = "latex") %>%
   kable_styling(full_width = F, font_size = 10,latex_options = "hold_position") %>% 
@@ -89,10 +89,8 @@ work <- tribble(
   "Research Associate", "Mydecine Innovations Group Inc.", "October", 2020, "April", 2022, "Denver, Colorado", "Created R Markdown guides on how to implement data visualization and analysis in R.",
   "Graduate Research Assistant", "University of Connecticut ", "August", 2018, "August", 2020, "Storrs, Connecticut", "Successfully defended thesis on genetic regulation of cannabinoid biosynthesis in Cannabis sativa.",
    "Graduate Research Assistant", "University of Connecticut ", "August", 2018, "August", 2020, "Storrs, Connecticut", "Discovered and published that applications of a plant hormone, known as methyl jasmonate, to Cannnabis plants causes a substantial increase in their cannabinoid levels.",
-  "Graduate Research Assistant", "University of Connecticut ", "August", 2018, "August", 2020, "Storrs, Connecticut", "Designed and executed experiments in university greenhouses and commercial controlled environment facilities.",
-      "Graduate Research Assistant", "University of Connecticut ", "August", 2018, "August", 2020, "Storrs, Connecticut", "Performed extractions on plant tissue samples to generate preparations for analysis on High-performance liquid chromatography (HPLC) equipment.",
-    "Graduate Research Assistant", "University of Connecticut ", "August", 2018, "August", 2020, "Storrs, Connecticut", "Quantified cannabinoid concentrations from plant tissue samples using HPLC equipment.",
-    "Graduate Research Assistant", "University of Connecticut ", "August", 2018, "August", 2020, "Storrs, Connecticut", "Implemented quantitative PCR to measure gene expression levels of genes in the cannabinoid biosynthesis pathway.",
+  "Graduate Research Assistant", "University of Connecticut ", "August", 2018, "August", 2020, "Storrs, Connecticut", "Designed and executed experiments in university greenhouses and commercial grow facilities.",
+  "Graduate Research Assistant", "University of Connecticut ", "August", 2018, "August", 2020, "Storrs, Connecticut", "Implemented quantitative PCR to measure gene expression levels of genes in the cannabinoid biosynthesis pathway.",
   "Graduate Research Assistant", "University of Connecticut ", "August", 2018, "August", 2020, "Storrs, Connecticut", "Analyzed and visualized data in R to facilitate comprehension in invited talks and manuscripts.",
   "Graduate Research Assistant", "University of Connecticut ", "August", 2018, "August", 2020, "Storrs, Connecticut", "Obtained controlled substances research licenses for laboratory and authored standard operating procedures for the sampling, transport, and secure storage of controlled substances.",
   "Graduate Mentor", "University of Connecticut ", "August", 2018, "August", 2020,"Storrs, Connecticut", "Trained undergraduate and graduate students in molecular biology techniques.",
@@ -108,6 +106,8 @@ work <- tribble(
 Co-authored a plant tissue culture publication on novel shoot organogenesis for species in the Aronia genus."
 ) 
 
+
+
 work %>%
   detailed_entries(
     with = title,
@@ -116,6 +116,9 @@ work %>%
     when = glue::glue("{startMonth} {startYear} - {endMonth} {endYear}",.na = ""),
     where = where
   )
+
+
+
 ```
 
 # Publications
@@ -195,5 +198,10 @@ Horticultural Society, Oral presentation. New York, New York. September 2019.
 \textbf{Apicella P.} and Berkowitz G. 'Association of a prenyltransferase (GOT) with THCA 
 production in medical marijuana', American Society of Plant Biology, 
 Brief oral presentation. San Jose, California. August 2019.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahoney_adventitious_2018}{}}%
+\textbf{Apicella P.} and Berkowitz G. 'The Plant Science of \emph{Cannabis sativa}', 
+Northeast Food And Drug Officials Association Meeting, Oral presentation. 
+Northampton, Massachusetts. May 2019.
 ```
 \pagebreak
